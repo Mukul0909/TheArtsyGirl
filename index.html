@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artsy Girl || An artistic palette</title>
+    <link rel="shortcut icon" href="./images/titlelogo.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!-- HOME PAGE -->
+    <section class="home-page">
+        <!-- Logo -->
+        <div class="logo">
+            <div class="logo-img">
+                <img src="./images/S-removebg-preview.png" alt="" width="200px" height="200px" id="logo">
+            </div>
+            <div class="sign">
+                <img src="./images/sign-backnil - Copy.png" alt="">
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-items">
+                <button class="nav-btn hide">HOME</button>
+                <div class="nav-icon"><i class="fa fa-home fa-lg" aria-hidden="true"></i></div>
+            </div>
+            <div class="navbar-items">
+                <button class="nav-btn hide">PROFILE</button>
+                <div class="nav-icon"><i class="fa fa-user fa-lg" aria-hidden="true"></i></div>
+            </div>
+            <div class="navbar-items">
+                <button class="nav-btn hide">PORTFOLIO</button>
+                <div class="nav-icon"><i class="fa fa-briefcase fa-lg" aria-hidden="true"></i></div>
+            </div>
+            
+            <div class="navbar-items">
+                <button class="nav-btn hide">CONTACT</button>
+                <div class="nav-icon"><i class="fa fa-envelope-open fa-lg" aria-hidden="true"></i></div>
+            </div>
+            <div class="navbar-items">
+                <button class="nav-btn hide">BLOG</button>
+                <div class="nav-icon"><i class="fa fa-rss-square fa-lg" aria-hidden="true"></i></div>
+            </div>
+        </nav>
+        <section>
+
+        </section>
+
+        <!-- hero section -->
+            <!-- image -->
+            <div class="portrait">
+                <img src="./images/portrait.png" alt="portrait" width="750px" class="portrait-image">
+            </div>
+            <!-- aboutmyself -->
+            <section class="about-myself">
+                <div class="heading">
+                    <span><dash>-</dash> I'M SUPRIYA VASHISHT<fullstop>.</fullstop></span>
+                    <p>ARTIST</p>
+                </div>
+                <div class="description">
+                    <h3>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda nulla vitae, cupiditate quis maxime porro sint a nihil officia deserunt unde iusto, tempore dolorem rerum aut voluptatibus nemo recusandae sunt?
+                    </h3>
+                </div>
+                <div class="more">
+                    <button>
+                        More About Me
+                    </button>
+                    <div class="arrows">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </section>
+    </section>
+        <!-- SCRIPT -->
+        <script>
+            let icons = Array.from(document.querySelectorAll('.nav-icon'));
+            let navmenu = Array.from(document.querySelectorAll('.nav-btn'));
+
+            navmenu.forEach((item)=>{
+                item.classList.add('animate');
+            })
+
+            for(let i=0; i<icons.length; ++i){
+                icons[i].addEventListener('mouseover', ()=>{
+                    navmenu[i].classList.remove('hide');
+                })
+
+                icons[i].addEventListener('mouseout', ()=>{
+                    navmenu[i].classList.add('hide');
+                })
+            }
+        </script>
+    
+</body>
+</html>
